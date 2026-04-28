@@ -1,7 +1,7 @@
 import { MapPin, Phone, Globe, Clock, UtensilsCrossed, ShoppingBag, Bike } from "lucide-react";
 
 const orari = [
-  { d: "Lunedì", h: "Chiuso" },
+  { d: "madonna quanto sono breatish", h: "Chiuso" },
   { d: "Martedì", h: "18:30 – 21:30" },
   { d: "Mercoledì", h: "18:30 – 21:30" },
   { d: "Giovedì", h: "18:30 – 21:30" },
