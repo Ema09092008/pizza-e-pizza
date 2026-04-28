@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pizza&pizzA — Forno & Pomodoro design system. All colors HSL. */
+
+@layer base {
+  :root {
+    /* Core palette */
+    --background: 35 38% 90%;        /* crema mozzarella #f5ead4 */
+    --foreground: 18 22% 8%;          /* nero forno */
+
+    --cream: 35 38% 90%;
+    --cream-soft: 36 42% 94%;
+    --ember: 9 73% 45%;               /* rosso pomodoro #c8341f */
+    --ember-glow: 14 80% 55%;
+    --char: 18 22% 8%;                /* #1a1410 */
+    --soot: 20 30% 13%;               /* #2d1f17 */
+    --gold: 38 65% 58%;
+
+    --card: 36 42% 94%;
+    --card-foreground: 18 22% 8%;
+
+    --popover: 36 42% 94%;
+    --popover-foreground: 18 22% 8%;
+
+    --primary: 9 73% 45%;
+    --primary-foreground: 35 38% 95%;
+
+    --secondary: 18 22% 8%;
+    --secondary-foreground: 35 38% 90%;
+
+    --muted: 30 18% 82%;
+    --muted-foreground: 20 15% 30%;
+
+    --accent: 38 65% 58%;
+    --accent-foreground: 18 22% 8%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 35 38% 95%;
+
+    --border: 20 20% 78%;
+    --input: 20 20% 78%;
+    --ring: 9 73% 45%;
+
+    --radius: 0.25rem;
+
+    /* Gradients */
+    --gradient-fire: linear-gradient(135deg, hsl(9 73% 45%) 0%, hsl(14 80% 55%) 50%, hsl(38 65% 58%) 100%);
+    --gradient-char: linear-gradient(180deg, hsl(20 30% 13%) 0%, hsl(18 22% 8%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(18, 22%, 8%, 0) 0%, hsla(18, 22%, 8%, 0.85) 100%);
+
+    /* Shadows */
+    --shadow-ember: 0 20px 60px -20px hsl(9 73% 45% / 0.5);
+    --shadow-deep: 0 30px 80px -30px hsl(18 22% 8% / 0.6);
+    --shadow-soft: 0 4px 20px -4px hsl(18 22% 8% / 0.15);
+
+    /* Transitions */
+    --ease-elegant: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "ss01", "kern";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    font-feature-settings: "dlig", "liga";
+  }
+}
+
+@layer components {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .menu-dotted {
+    background-image: radial-gradient(circle, hsl(var(--foreground) / 0.35) 1px, transparent 1px);
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 center;
+  }
+
+  .grain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.08;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .animate-flicker {
+    animation: flicker 4s ease-in-out infinite;
+  }
+  .animate-rise {
+    animation: rise 1s var(--ease-elegant) both;
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
