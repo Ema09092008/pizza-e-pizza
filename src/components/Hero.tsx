@@ -52,12 +52,8 @@ const Hero = () => {
         {/* Right meta */}
         <div className="col-span-12 md:col-span-3 flex md:flex-col justify-between items-end gap-6 pt-4 text-right">
           <div className="space-y-1">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-cream/60">Specialità</div>
-            <div className="font-display text-2xl">Margherita<br/>Pistacchiosa</div>
           </div>
           <div className="space-y-1">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-cream/60">Servizi</div>
-            <div className="text-sm leading-relaxed">Sala · Asporto<br/>Domicilio</div>
           </div>
         </div>
       </div>
