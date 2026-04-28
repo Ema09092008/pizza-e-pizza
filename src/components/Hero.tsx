@@ -28,7 +28,9 @@ const Hero = () => {
 
         {/* Center title */}
         <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-center text-center">
-          <div className="text-[10px] uppercase tracking-[0.4em] text-ember mb-6">Pizzeria · Forno a legna · 1985</div>
+      <div className="relative -top-4 text-[10px] uppercase tracking-[0.4em] text-ember mb-7">
+         Pizzeria · Forno a legna · 1985
+        </div>          
           <h1 className="font-display text-balance leading-[0.85] text-[clamp(3.5rem,12vw,9rem)]">
             Pizza<span className="text-ember italic">&amp;</span>
             <br />
