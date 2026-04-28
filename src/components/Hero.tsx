@@ -39,9 +39,6 @@ const Hero = () => {
             <p className="text-xs uppercase tracking-[0.3em] text-cream/70">L'arte dell'impasto</p>
             <div className="h-px w-12 bg-cream/40" />
           </div>
-          <p className="mt-8 max-w-md text-cream/80 text-balance">
-            Ingredienti scelti, lievitazione lenta, cottura nel forno a legna. La pizza come si faceva una volta, da quarant'anni.
-          </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <a href="#menu" className="px-7 py-3.5 bg-ember text-cream uppercase tracking-[0.2em] text-xs hover:bg-ember-glow transition-colors duration-300 shadow-ember">
               Scopri il menù
