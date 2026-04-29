@@ -53,10 +53,10 @@ const Contatti = () => {
                 <div className="text-[10px] uppercase tracking-[0.25em] text-cream/60 group-hover:text-cream/80">Telefono</div>
                 <div className="font-display text-2xl mt-1">045 700 0005</div>
               </a>
-              <a href="https://pizzapizza.it" target="_blank" rel="noreferrer" className="block border border-cream/15 p-6 hover:bg-ember hover:border-ember transition-all duration-300 group">
+              <a href="https://www.facebook.com/pizza3pizza/?locale=it_IT" target="_blank" rel="noreferrer" className="block border border-cream/15 p-6 hover:bg-ember hover:border-ember transition-all duration-300 group">
                 <Globe className="w-5 h-5 text-ember group-hover:text-cream mb-3" />
-                <div className="text-[10px] uppercase tracking-[0.25em] text-cream/60 group-hover:text-cream/80">Sito web</div>
-                <div className="font-display text-2xl mt-1">pizzapizza.it</div>
+                <div className="text-[10px] uppercase tracking-[0.25em] text-cream/60 group-hover:text-cream/80">Facebook</div>
+                <div className="font-display text-2xl mt-1">Pizza e pizzA </div>
               </a>
             </div>
 
